@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+}
+
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    /* width: 100px; height: 100px; */
+}
+
+.container {
+    display: flex;
+}
+
+/* 원래 html 명령어 순서로 정렬이 되는데, order를 줌으로써 순서를 임의로 바꿀 수 있다. */
+.item:nth-child(1) {order: 3;}
+.item:nth-child(2) {
+    order: 1; 
+    /* flex, grid에서는 position 없이도 z-index가 실행됨 */
+    z-index: 20;
+}
+.item:nth-child(3) {order: 2;transform: scale(1.5);}

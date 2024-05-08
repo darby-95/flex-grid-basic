@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+.container{
+   background-color: yellow;
+   border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/*  place-content
+    : grid content들의 너비를 모두 합한 값이 부모 요소인 container보다 작을때 
+    grid content들을 통채로 묶어서 정렬한다.
+*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    height: 100vh;
+    place-content: start center; /* 기본값 */
+}
+
+
+.container .item {}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+}
+
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    /* width: 100px; height: 100px; */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.item:nth-child(2) {
+    align-self: auto;
+    /* ❗❗ align-items 와 align-self 은 행동이 같다.
+    align-items 보다 align-self가 우선권이 있다. */
+
+    align-items: auto;
+    align-items: center;
+    align-items: end;
+    align-items: start;
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end ;
+
+}

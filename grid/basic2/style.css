@@ -1,0 +1,57 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {background-color: yellow; border: 2px solid #000;}
+.container .item {background-color: green; border: 2px solid #000;}
+
+
+
+.container {
+    display: grid;
+
+    /* 한 줄에 몇 칸을 만들것이냐 */
+
+    /* ex1 ) grid-template-columns: 1fr 1fr 1fr;
+    3칸을 만들며, 비율을 1:1:1로 만들겠다는 뜻.
+
+    /* ex2 ) 1fr 1fr 2fr; : 1:1:2 의 비율로 3칸을 만들겠다는 뜻.*/
+
+    /* ex3 ) grid-template-columns: 300px 300px 300px;
+    300px의 크기를 가진 3칸을 만들겠다는 뜻.*/
+
+    /* ex4 ) grid-template-columns: 300px 1fr 100px;
+    300px, 100px을 제외한 나머지 공간을 가운데 영역이 모두 차지한다. */
+
+    /* 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5,1fr);
+    같은 수치가 반복되면 위와 같이 줄여서 쓸 수 있다.
+    */
+
+    /* grid-template-columns: repeat(3,1fr 2fr 1fr);
+    1fr 2fr 1fr, 즉 1:2:1 비율을 3번 반복한다.
+    즉, 1:2:1:1:2:1:1:2:1 의 비율을 가지게 된다. */
+
+    /* grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 200px; 1행과 2행은 200px의 크기를 가지고 나머지(auto)는 관여하지 않는다. */
+
+    /* grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 200px auto; 👆 위와 같은 의미 */
+
+
+    /* grid-template-rows: repeat(3,1fr); 1,2,3째줄은 1fr의 크기를 가지며 나머지는 관여하지 않는다. */
+
+    /* grid-template-rows: repeat(2,1fr) 300px; 1,2번째 줄은 1fr의 크기를 가지며 3번째 줄은 300px을 가진다. 그 외 나머지 공간은 관여하지 않는다. */
+    
+
+    height: 80vh;
+
+
+    /* gap: 그리드 사이의 공간 */
+    gap: 20px; /* flex와 달리 grid 의 gap은 아래위 공간을 모두 준다. */
+    column-gap: 20px; /* 따라서 칸의 gap을 따로 주려면 해당 명령어를 주어야 한다. */
+    row-gap: 20px; /* 행의 gap을 주려면 해당 명령어를 사용하면 된다. */
+    grid-gap:20px; /* gap:20px;와 같다. gap이 ie(internet explore)에서 사용하지 못한다. */
+
+}
+
+.container .item {}

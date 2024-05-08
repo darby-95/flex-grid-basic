@@ -1,0 +1,27 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+.container{
+   background-color: yellow;
+   border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/*  place-items
+    : align-items와 justify-items를 단축하여 사용하는 속성이다.
+    : align-items(위아래), justify-items(좌우)의 순서로 작성한다. 만일 하나의 값이면 두 속성에 모두 적용한다.
+*/
+.container{
+    display: grid;
+    height: 80vh;
+
+    grid-template-columns: repeat(3,1fr);
+    place-items:center; /* align-items와 justify-items 모두 center */
+    place-items:start center; /* align-items(start), justify-items(center) */
+}
+
+
+.container .item {}

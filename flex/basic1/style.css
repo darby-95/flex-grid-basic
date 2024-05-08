@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+    display: flex;
+    /* flex에서 자식은 줄어들어라, 늘어나지마라고 태어나기 때문에
+    자식은 부모의 공간에 모두 다 들어간다. */
+}
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    width: 25%; /* 100%을 넘어버려도 부모 안에 정렬시킨다. */
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+    
+    display: flex;
+    /*display: inline-flex;  ==  inline-flex되면 item은 자식의 공간만 차지한다. */
+
+    /*flex-direction: row;      ==  flex의 방향을 설정, row는 기본값(가로). */
+    /* flex-direction: column;  ==  세로로 정렬 */
+
+    flex-wrap: wrap; /* 줄 넘김. 크기가 넘쳐버리면 아래 줄로 자동으로 줄이 넘겨진다.  */
+}
+
+
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    /* width: 100px; height: 100px; */
+}
+
+
+.container {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; 👇 아래 두줄을 한줄에 쓸 수 있다.*/ 
+    flex-flow: row-wrap;
+
+    /* 메인축 위에서 오뎅(item)들의 정렬 방법, 메인축 방향으로 이동한다. */
+    justify-content: flex-start; /* 시작(왼쪽)에 정렬된다. */
+    justify-content: flex-end; /* 끝(오른쪽)에 정렬된다. */
+    justify-content: center; /* 가운데에 정렬된다. */
+
+    justify-content: space-between; /* 시작과 끝의 컨텐츠는 벽으로 붙고 사이 공간을 동등하게 준다. */
+    justify-content: space-around; /* 한 컨텐츠마다 양 옆으로 똑같은 간격을 가진다. */
+    justify-content: space-evenly; /* 컨텐츠 사이마다 똑같은 간격을 가진다. ❗ 지원되지 않는 프로그램이 있기 때문에 되도록이면 쓰지 말것! */
+
+}
+.item {}

@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {background-color: yellow; border: 2px solid #000;}
+.container .item {background-color: green; border: 2px solid #000;}
+
+.container .item {font-size: 30px;}
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: minmax(100px,auto);
+    grid-template-areas: 
+      /*'abc       header   header'  abc에 해당하는 것이 없으므로 빈칸 처리가 된다. */
+        'none      header   header'
+        'sidebar-a  main sidebar-b'
+        '...         ...       ...' /* : 비워두는 칸 */
+        'footer    footer   footer' /* 해당 칸들을 모두 footer 가 사용한다. */
+    ;
+}
+/* grid-template-areas 
+각 영역의 이름을 붙이고, 그 이름을 이용해서 배치하는 방법
+❗❗ 사이에 1칸 이상만 띄워도 몇 칸을 띄우든 상관없다.
+
+빈칸 만들기 - 
+마침표는 셀이 있는데 그 안에 아무것도 안채우겠다는 의미이다. 
+none이라고 적어도 된다.
+....와 같이 마침표를 공백없이 찍으면 마침표 하나와 같은 역할을 한다.
+*/
+
+/* 각 영역의 이름과 매칭을 시켜야 한다. 
+grid-area: "header"; (X) 따옴표로 묶으면 안된다. */
+.header {grid-area: header;} 
+.sidebar-a {grid-area: sidebar-a;}
+.sidebar-b {grid-area: sidebar-b;}
+.main {grid-area: main;}
+.footer {grid-area: footer;}

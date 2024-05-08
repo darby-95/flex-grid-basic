@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+    
+    display: flex;
+    /*display: inline-flex;  ==  inline-flex되면 item은 자식의 공간만 차지한다. */
+
+    /*flex-direction: row;      ==  flex의 방향을 설정, row는 기본값(가로). */
+    /* flex-direction: column;  ==  세로로 정렬 */
+
+    flex-wrap: wrap; /* 줄 넘김. 크기가 넘쳐버리면 아래 줄로 자동으로 줄이 넘겨진다.  */
+}
+
+
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    /* width: 100px; height: 100px; */
+}
+
+
+.container {
+    display: flex;
+    height: 50vh;
+
+    /* justify-content와 수직방향의 정렬 */
+    align-items: stretch;
+    align-items: start; /* 위쪽에 붙는다. */
+    align-items: end; /* 아래쪽에 붙는다. */
+    align-items: center; /* 가운데에 붙는다. */
+
+    align-items: baseline; /* 글자의 라인에 맞춘다. ※잘 사용하진 않는다. */
+}
+.item {}

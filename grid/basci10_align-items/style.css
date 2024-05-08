@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+.container{
+   background-color: yellow;
+   border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/*  align-items 
+    : 세로 방향 정렬한다.
+    : 각 셀 안에서 움직인다.
+*/
+.container{
+    display: grid;
+    height: 80vh;
+
+    grid-template-columns: repeat(3,1fr);
+    align-items: stretch; /* 기본값 */
+}
+
+
+.container .item {}

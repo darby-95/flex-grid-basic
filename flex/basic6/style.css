@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    border: 2px solid #000; 
+    background-color: yellow;
+}
+
+
+.container .item{
+    border: 2px solid #000; 
+    background-color: green;
+    /* width: 100px; height: 100px; */
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+
+    /* 아이템들이 2줄 이상일때, 수직축(cross) 방향 정렬 */
+    align-content: stretch; /* 기본값 */
+    align-content: flex-start; /* 아이템들이 하나로 묶여, 모두가 위쪽으로 붙는다. */
+    align-content: flex-end; /* 아이템들이 하나로 묶여, 모두가 아래쪽으로 붙는다. */
+    align-content: center; /* 아이템들이 하나로 묶여, 모두가 가운데로 붙는다. */
+
+    align-content: space-between; /* 처음과 끝의 아이템은 끝과 끝으로 붙고, 아이템들 사이에 동등하게 공간을 배분한다. */
+    align-content: space-around; /* 아이템마다 위아래로 동등하게 공간을 배분한다. */
+    align-content: space-evenly; /* 아이템들 사이를 동등하게 배분한다. */
+
+}
+.item {}

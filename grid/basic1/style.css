@@ -1,0 +1,19 @@
+*{margin: 0; padding: 0;} 
+
+
+/* grid는 flex보다 나중에 나왔다.
+flex는 한 방향 배치 구현
+grid는 두 방향 배치 구현 */
+
+/* 전체 구현은 grid하고 부분적인 구현은 flex로 사용하는 경우가 많다. */
+
+/* flex와 grid의 자식요소가 inline 요소일지라도 block 요소의 성질(공간에대한 인식)을 가진다. */
+
+.container {
+    display: grid;
+    /* 자식이 block 요소일때 부모에게 display: grid;를 적용하면 자식 요소는 아무런 변화가 없다. */
+    /* 자식이 inline 요소일때 부모에게 display: grid;를 적용하면 자식 요소는 block 요소 처럼 전체의 넓이를 잡는다(block  요소화 된다.). */
+}
+
+
+.container .item {}
